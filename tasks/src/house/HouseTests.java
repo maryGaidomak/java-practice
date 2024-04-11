@@ -3,20 +3,15 @@ package house;
 import java.util.ArrayList;
 import java.util.List;
 
-public class HouseTests {
+public class HouseTests extends Test.BaseTest {
     public static void Test() {
-        List<String> results = new ArrayList<>();
-
         for (int i = 0; i < 100; i++) {
             String ending = getEnding(i);
             House house = new House(i);
             if (!house.toString().endsWith(ending))
-                results.add("Test failed on floor " + i + " with ending " + ending + " got " + house);
+                AddResult("Test failed on floor " + i + " with ending " + ending + " got " + house);
         }
-        if (!results.isEmpty())
-            results.forEach(System.out::println);
-        else
-            System.out.println("Houses test passed. Checked 100 floors");
+       ReturnResult("House", 100);
     }
 
     // Create private method to return ending by number of floors

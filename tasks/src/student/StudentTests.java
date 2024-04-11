@@ -3,9 +3,8 @@ package student;
 import java.util.ArrayList;
 import java.util.List;
 
-public class StudentTests {
+public class StudentTests extends Test.BaseTest {
     public static void Test() {
-        List<String> testResults = new ArrayList<>();
 
         Student student1 = new Student("Вася", null);
         student1.addGrade(3);
@@ -17,11 +16,11 @@ public class StudentTests {
         System.out.println("Вася " + (student1.checkIfExcellent() ? "отличник" : "не отличник"));
         */
         if (!student1.toString().equals("Вася: [3, 4, 5]"))
-            testResults.add("Test failed on student print " + student1);
+            AddResult("Test failed on student print " + student1);
         if (!student1.getAverage().equals(4))
-            testResults.add("Test failed on student average " + student1);
+            AddResult("Test failed on student average " + student1);
         if (student1.checkIfExcellent())
-            testResults.add("Test failed on student excellent " + student1);
+            AddResult("Test failed on student excellent " + student1);
 
         Student student2 = new Student("Петя", List.of(5, 5, 5));
         /*
@@ -30,15 +29,12 @@ public class StudentTests {
         System.out.println("Петя " + (student2.checkIfExcellent() ? "отличник" : "не отличник"));
         */
         if (!student2.toString().equals("Петя: [5, 5, 5]"))
-            testResults.add("Test failed on student print " + student2);
+            AddResult("Test failed on student print " + student2);
         if (!student2.getAverage().equals(5))
-            testResults.add("Test failed on student average " + student2);
+            AddResult("Test failed on student average " + student2);
         if (!student2.checkIfExcellent())
-            testResults.add("Test failed on student excellent " + student2);
+            AddResult("Test failed on student excellent " + student2);
 
-        if (testResults.isEmpty())
-            System.out.println("Student test passed. Checked 2 students");
-        else
-            testResults.forEach(System.out::println);
+        ReturnResult("Student", 2);
     }
 }
