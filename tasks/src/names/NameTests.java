@@ -1,8 +1,5 @@
 package names;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class NameTests extends Test.BaseTest {
     public static void Test() {
         Name firstName = new Name("Клеопатра");

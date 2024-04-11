@@ -1,8 +1,5 @@
 package house;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class HouseTests extends Test.BaseTest {
     public static void Test() {
         for (int i = 0; i < 100; i++) {
