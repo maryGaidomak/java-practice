@@ -1,7 +1,7 @@
 package employee;
 
 public class Employee {
-    private String name;
+    private final String name;
     Department department;
 
     public Employee(String name, Department department) {
