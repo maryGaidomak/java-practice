@@ -1,7 +1,13 @@
 package names;
 
 public class NameTests extends Test.BaseTest {
-    public static void Test() {
+
+    public NameTests() {
+        super("Name", 4);
+    }
+
+    @Override
+    public void Test() {
         Name firstName = new Name("Клеопатра");
         if (!firstName.toString().equals("Клеопатра"))
             AddResult("Test failed on name " + firstName);
@@ -22,6 +28,6 @@ public class NameTests extends Test.BaseTest {
             // Expected
         }
 
-        ReturnResult("Name", 4);
+        super.Test();
     }
 }
