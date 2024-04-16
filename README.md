@@ -1,2 +1,4 @@
 # java-practice
-Preparing for exam
+Preparing for exam 
+
+some text
