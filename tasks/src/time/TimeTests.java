@@ -4,7 +4,12 @@ import Test.BaseTest;
 
 public class TimeTests extends BaseTest {
 
-    public static void Test() {
+    public TimeTests() {
+        super("Time", 6);
+    }
+
+    @Override
+    public void Test() {
         Time time = new Time(12000);
         if (!time.toString().equals("03:20:00"))
             AddResult("Test failed on time " + time);
@@ -40,6 +45,6 @@ public class TimeTests extends BaseTest {
         if (time.GetSecond() != 36)
             AddResult("Test failed on check get second " + time + " second");
 
-        ReturnResult("Time", 6);
+        super.Test();
     }
 }

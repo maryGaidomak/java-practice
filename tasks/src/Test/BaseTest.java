@@ -1,23 +1,35 @@
 package Test;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class BaseTest {
-    private static ArrayList<String> testResults = new ArrayList<>();
+    private final String testName;
+    private final int testCount;
+    private final List<String> testResults = new ArrayList<>();
 
-    public static void AddResult(String result) {
-        testResults.add(result);
+    public BaseTest(String testName, int testCount) {
+        this.testName = testName;
+        this.testCount = testCount;
     }
 
-    public static void ReturnResult(String testName, int testCount) {
-        String result = testName + "test passed. ";
+    public void Test() {
+        String result = testName + " test passed. ";
         if (testCount > 0)
-            result += "Checked "+ testCount  + " times";
-        else
-            System.out.println(result);
+            result += "Checked "+ testCount  + " test suites.";
+
         if (testResults.isEmpty())
             System.out.println(result);
         else
             testResults.forEach(System.out::println);
+        CleanResults();
+    }
+
+    protected void AddResult(String result) {
+        testResults.add(result);
+    }
+
+    protected void CleanResults() {
+        testResults.clear();
     }
 }

@@ -1,14 +1,20 @@
 package house;
 
 public class HouseTests extends Test.BaseTest {
-    public static void Test() {
+
+    public HouseTests() {
+        super("House", 100);
+    }
+
+    @Override
+    public void Test() {
         for (int i = 0; i < 100; i++) {
             String ending = getEnding(i);
             House house = new House(i);
             if (!house.toString().endsWith(ending))
                 AddResult("Test failed on floor " + i + " with ending " + ending + " got " + house);
         }
-       ReturnResult("House", 100);
+        super.Test();
     }
 
     // Create private method to return ending by number of floors

@@ -1,3 +1,4 @@
+import Test.CommonTest;
 import house.HouseTests;
 import names.NameTests;
 import pistol.PistolTests;
@@ -6,10 +7,13 @@ import time.TimeTests;
 
 public class Main {
     public static void main(String[] args) {
-        HouseTests.Test();
-        NameTests.Test();
-        StudentTests.Test();
-        PistolTests.Test();
-        TimeTests.Test();
+        // new CommonTest().Test();
+
+        new HouseTests().Test();
+        new NameTests().Test();
+        new StudentTests().Test();
+        new PistolTests().Test();
+        new TimeTests().Test();
+
     }
 }

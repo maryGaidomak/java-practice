@@ -4,7 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PistolTests extends Test.BaseTest{
-    public static void Test(){
+
+    public PistolTests(){
+        super("Pistol", 2);
+    }
+
+    @Override
+    public  void Test(){
         Pistol pistol = new Pistol(3, 5);
         List<String> pistolOutput = new ArrayList<>();
         for (int i = 0; i < 5; i++)
@@ -26,6 +32,6 @@ public class PistolTests extends Test.BaseTest{
         if (lost != 1 || unloadResult != 5)
             AddResult("Test failed on pistol 2 load/unload.");
 
-        ReturnResult("Pistol", 2);
+        super.Test();
     }
 }

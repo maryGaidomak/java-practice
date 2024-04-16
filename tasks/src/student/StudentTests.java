@@ -3,7 +3,13 @@ package student;
 import java.util.List;
 
 public class StudentTests extends Test.BaseTest {
-    public static void Test() {
+
+    public StudentTests() {
+        super("Student", 2);
+    }
+
+    @Override
+    public  void Test() {
 
         Student student1 = new Student("Вася", null);
         student1.addGrade(3);
@@ -34,6 +40,6 @@ public class StudentTests extends Test.BaseTest {
         if (!student2.checkIfExcellent())
             AddResult("Test failed on student excellent " + student2);
 
-        ReturnResult("Student", 2);
+        super.Test();
     }
 }
