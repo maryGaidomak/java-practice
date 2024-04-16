@@ -1,6 +1,6 @@
 package employee;
 
-import Test.BaseTest;
+import test.BaseTest;
 
 public class EmployeeTests extends BaseTest {
     public EmployeeTests() {

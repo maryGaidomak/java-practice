@@ -3,7 +3,7 @@ package pistol;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PistolTests extends Test.BaseTest{
+public class PistolTests extends test.BaseTest{
 
     public PistolTests(){
         super("Pistol", 2);

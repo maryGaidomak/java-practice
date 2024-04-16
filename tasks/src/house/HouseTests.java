@@ -1,6 +1,6 @@
 package house;
 
-public class HouseTests extends Test.BaseTest {
+public class HouseTests extends test.BaseTest {
 
     public HouseTests() {
         super("House", 100);

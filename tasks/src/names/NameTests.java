@@ -1,6 +1,6 @@
 package names;
 
-public class NameTests extends Test.BaseTest {
+public class NameTests extends test.BaseTest {
 
     public NameTests() {
         super("Name", 4);

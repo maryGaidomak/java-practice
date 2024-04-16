@@ -1,6 +1,6 @@
 package time;
 
-import Test.BaseTest;
+import test.BaseTest;
 
 public class TimeTests extends BaseTest {
 

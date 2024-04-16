@@ -2,7 +2,7 @@ package student;
 
 import java.util.List;
 
-public class StudentTests extends Test.BaseTest {
+public class StudentTests extends test.BaseTest {
 
     public StudentTests() {
         super("Student", 2);
