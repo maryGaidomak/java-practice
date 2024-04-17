@@ -1,4 +1,5 @@
 import city.CityTests;
+import dot.DotTests;
 import test.CommonTest;
 import employee.EmployeeTests;
 import house.HouseTests;
@@ -18,5 +19,6 @@ public class Main {
         new TimeTests().Test();
         new EmployeeTests().Test();
         new CityTests().Test();
+        new DotTests().Test();
     }
 }
