@@ -1,5 +1,7 @@
 import city.CityTests;
 import dot.DotTests;
+import permanentArray.PermanentArray;
+import permanentArray.PermanentArrayTests;
 import test.CommonTest;
 import employee.EmployeeTests;
 import house.HouseTests;
@@ -20,5 +22,7 @@ public class Main {
         new EmployeeTests().Test();
         new CityTests().Test();
         new DotTests().Test();
+        new PermanentArrayTests().Test();
+
     }
 }
